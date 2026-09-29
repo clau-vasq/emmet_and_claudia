@@ -1,0 +1,1072 @@
+/* ------------------------------
+   BASIC PAGE SETUP
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4efdf;
+    color: #76947a;
+    font-family: Helvetica, Arial, sans-serif;
+}
+button,
+input,
+textarea,
+select {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.home {
+    width: min(90%, 820px);
+    margin: 0 auto;
+    padding: 90px 0 80px;
+}
+
+/* ------------------------------
+   HEADLINE
+------------------------------ */
+
+.hero h1 {
+    margin: 0;
+    max-width: 720px;
+
+    font-size: clamp(2.8rem, 6vw, 4.6rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero h1 .headline-small {
+    margin-top: 14px;
+
+    font-size: 0.48em;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+}
+
+
+/* ------------------------------
+   DATE / TIME / LOCATION
+------------------------------ */
+
+.event-details {
+    margin: 40px 0;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
+
+.event-details p {
+    margin: 3px 0;
+}
+
+
+/* ------------------------------
+   RSVP BUTTON
+------------------------------ */
+
+.rsvp-button {
+    display: block;
+    width: 100%;
+
+    padding: 32px 20px;
+
+    background: #76947a;
+    color: #f4efdf;
+
+    border-radius: 28px;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+
+    transition: transform 0.15s ease;
+}
+
+.rsvp-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ------------------------------
+   PHOTO COLLAGE
+------------------------------ */
+
+.photos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 330px 330px;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+
+/* Adjust the crop of each photo individually */
+
+.kayak {
+    object-position: center 35%;
+}
+
+.sports {
+    object-position: center;
+}
+
+.snow {
+    object-position: center 55%;
+}
+
+.engagement {
+    object-position: center 35%;
+}
+
+
+/* ------------------------------
+   THANKSGIVING NOTE
+------------------------------ */
+
+/* .thanksgiving-note {
+    max-width: 650px;
+
+    margin: 35px auto;
+
+    color: #454545;
+
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.55;
+} */
+.thanksgiving-note {
+    max-width: 650px;
+    margin: 35px auto;
+
+    color: #657269;
+
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+
+/* ------------------------------
+   EVENT INFO BUTTON
+------------------------------ */
+
+.info-button {
+    display: block;
+    width: 100%;
+
+    margin-top: 35px;
+    padding: 24px 20px;
+
+    background: #76947a;
+    color: #f4efdf;
+
+    border-radius: 28px;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    transition: transform 0.15s ease;
+}
+
+.info-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 600px) {
+
+    .home {
+        width: 92%;
+        padding-top: 55px;
+        padding-bottom: 50px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.6rem, 13vw, 4rem);
+    }
+
+    .event-details {
+        margin: 30px 0;
+        font-size: 1rem;
+    }
+
+    .rsvp-button {
+        padding: 25px 15px;
+    }
+
+    .photos {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px;
+
+        gap: 8px;
+
+        margin-top: 25px;
+    }
+
+    .photo {
+        border-radius: 18px;
+    }
+
+    .thanksgiving-note {
+        margin: 28px auto;
+
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .info-button {
+        margin-top: 25px;
+    }
+}
+
+/* ==============================================
+   RSVP PAGE
+============================================== */
+
+.rsvp-page {
+    width: min(90%, 900px);
+    margin: 0 auto;
+    padding: 60px 0 100px;
+}
+
+
+/* Home link */
+
+.back-link {
+    color: #76947a;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* RSVP heading */
+
+.rsvp-header {
+    margin: 60px 0 40px;
+}
+
+.rsvp-header h1 {
+    margin: 0;
+
+    font-size: clamp(4rem, 10vw, 7rem);
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+}
+
+.rsvp-header p {
+    margin: 25px 0 0;
+
+    color: #454545;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Remove normal fieldset appearance */
+
+.rsvp-fieldset {
+    margin: 0 0 60px;
+    padding: 0;
+
+    border: 0;
+}
+
+
+/* RSVP choice grid */
+
+.rsvp-choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+/* Hide normal radio buttons */
+
+.rsvp-choice input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Each clickable RSVP card */
+
+.choice-card {
+    height: 290px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 18px 18px;
+
+    background: #ebe6d8;
+
+    border: 4px solid transparent;
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.15s ease,
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.choice-card:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Selected card */
+
+.rsvp-choice input:checked + .choice-card {
+    background: #e0e8df;
+    border-color: #76947a;
+}
+
+
+/* Yes / No / Maybe text */
+
+.choice-title {
+    color: #76947a;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Hibou images */
+
+.choice-card img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+}
+
+
+/* Maybe joke */
+
+.maybe-note {
+    margin: 15px 0 0;
+
+    color: #666;
+
+    text-align: right;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+
+/* Regular form questions */
+
+.form-field {
+    margin: 45px 0;
+}
+
+.form-field > label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #76947a;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+
+/* Inputs */
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    background: #fffdf7;
+
+    border: 2px solid #c9c3b4;
+    border-radius: 12px;
+
+    color: #333;
+
+    font: inherit;
+    font-size: 1.05rem;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+
+/* Highlight field when typing */
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #76947a;
+}
+
+
+/* Small notes */
+
+.optional,
+.field-note {
+    color: #777;
+
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.field-note {
+    margin: 7px 0 0;
+}
+
+
+/* Email checkbox */
+
+.checkbox-row {
+    display: flex !important;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px !important;
+
+    color: #454545 !important;
+
+    font-size: 1rem !important;
+    font-weight: normal !important;
+
+    cursor: pointer;
+}
+
+.checkbox-row input {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Submit button */
+
+.submit-rsvp {
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 28px 20px;
+
+    background: #76947a;
+    color: #f4efdf;
+
+    border: 0;
+    border-radius: 28px;
+
+    font: inherit;
+    font-size: 2rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease;
+}
+
+.submit-rsvp:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Accessibility helper */
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* RSVP mobile layout */
+
+@media (max-width: 650px) {
+
+    .rsvp-page {
+        width: 92%;
+        padding-top: 35px;
+    }
+
+    .rsvp-header {
+        margin: 40px 0 30px;
+    }
+
+    .rsvp-choices {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .choice-card {
+        height: 150px;
+
+        flex-direction: row;
+
+        padding: 15px 20px;
+    }
+
+    .choice-card img {
+        width: 45%;
+        height: 120px;
+    }
+
+    .maybe-note {
+        text-align: left;
+    }
+
+}
+.form-field .field-note {
+    margin: -3px 0 10px;
+}
+
+/* ==============================================
+   EVENT INFO + FAQ PAGE
+============================================== */
+
+.info-page {
+    width: min(90%, 820px);
+    margin: 0 auto;
+    padding: 60px 0 100px;
+}
+
+
+/* Page heading */
+
+.info-header {
+    margin: 60px 0 70px;
+}
+
+.info-header h1 {
+    margin: 0;
+
+    font-size: clamp(3.5rem, 9vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+
+/* Main sections */
+
+.info-section {
+    margin: 0 0 70px;
+}
+
+.info-section h2 {
+    margin: 0 0 25px;
+
+    color: #76947a;
+
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.info-section > p,
+.event-info-block {
+    color: #454545;
+
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+/* When + Where */
+
+.event-info-block p {
+    margin: 0 0 25px;
+}
+
+.event-info-block a {
+    color: #76947a;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+
+/* FAQs */
+
+.faq-item {
+    padding: 30px 0;
+
+    border-top: 2px solid #d4cebd;
+}
+
+.faq-item:last-child {
+    border-bottom: 2px solid #d4cebd;
+}
+
+.faq-item h3 {
+    margin: 0 0 12px;
+
+    color: #76947a;
+
+    font-size: 1.3rem;
+    line-height: 1.25;
+}
+
+.faq-item p {
+    margin: 0;
+
+    color: #454545;
+
+    font-size: 1.1rem;
+    line-height: 1.55;
+}
+
+
+/* RSVP button at bottom */
+
+.info-rsvp-button {
+    display: block;
+    width: 100%;
+
+    padding: 28px 20px;
+
+    background: #76947a;
+    color: #f4efdf;
+
+    border-radius: 28px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+
+    transition: transform 0.15s ease;
+}
+
+.info-rsvp-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .info-page {
+        width: 92%;
+        padding-top: 35px;
+    }
+
+    .info-header {
+        margin: 40px 0 55px;
+    }
+
+    .info-section {
+        margin-bottom: 55px;
+    }
+
+    .info-section h2 {
+        font-size: 1.8rem;
+    }
+
+}
+/* ==============================================
+   RSVP CONFIRMATION
+============================================== */
+
+.rsvp-confirmation {
+    padding: 50px 0;
+}
+
+.rsvp-confirmation h1 {
+    margin: 0 0 60px;
+
+    color: #76947a;
+
+    font-size: clamp(4rem, 10vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+.confirmation-details h2 {
+    margin: 0 0 35px;
+
+    color: #76947a;
+
+    font-size: 2.5rem;
+}
+
+.confirmation-details p {
+    margin: 0 0 35px;
+
+    color: #454545;
+
+    font-size: 1.4rem;
+    line-height: 1.45;
+}
+
+.confirmation-details a {
+    color: #76947a;
+    text-underline-offset: 5px;
+}
+
+.sorry-message {
+    margin: 0 0 60px;
+
+    color: #454545;
+
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+.maybe-confirmation {
+    margin: 50px 0;
+
+    color: #666;
+
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.back-home-button {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 16px 24px;
+
+    background: #76947a;
+    color: #f4efdf;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+/* ----------------------------------------------
+   CONFIRMATION LAYOUT WITH PHOTO
+---------------------------------------------- */
+
+.confirmation-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(300px, 1.2fr);
+    gap: 50px;
+
+    align-items: start;
+
+    margin-bottom: 50px;
+}
+
+
+/* Photo sits directly under the left edge of
+   "thank you!" */
+
+.confirmation-photo {
+    width: 100%;
+}
+
+.confirmation-photo img {
+    display: block;
+
+    width: 100%;
+    height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+
+/* Text on right */
+
+.confirmation-layout .confirmation-details {
+    padding-top: 5px;
+}
+
+.confirmation-layout .confirmation-details h2 {
+    margin-top: 0;
+}
+
+
+/* Maybe-specific message */
+
+.maybe-message {
+    margin-top: 40px !important;
+
+    color: #666 !important;
+
+    font-size: 1rem !important;
+    font-style: italic;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .confirmation-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .confirmation-photo img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    /* Yes photo needs a little more vertical room */
+    #yes-confirmation .confirmation-photo img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .rsvp-confirmation h1 {
+        margin-bottom: 35px;
+    }
+
+}
+
+/* Always respect hidden confirmation states */
+.confirmation-layout[hidden] {
+    display: none;
+}
+
+/* ==============================================
+   PASSWORD GATE
+============================================== */
+
+.password-gate {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: #f4efdf;
+}
+
+
+.password-box {
+    width: min(100%, 600px);
+
+    text-align: center;
+}
+
+
+.password-box h1 {
+    margin: 0 0 35px;
+
+    color: #76947a;
+
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+
+.password-box > p {
+    margin-bottom: 12px;
+    color: #657269;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+#password-form {
+    display: flex;
+    gap: 10px;
+
+    width: min(100%, 380px);
+    margin: 0 auto;
+}
+
+
+#password-input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 11px 14px;
+
+    background: #fffdf7;
+
+    border: 2px solid #76947a;
+    border-radius: 14px;
+
+    color: #333;
+
+    font: inherit;
+    font-size: 1.1rem;
+}
+
+
+#password-input:focus {
+    outline: none;
+    border-color: #76947a;
+}
+
+
+#password-form button {
+    padding: 11px 20px;
+
+    background: #76947a;
+    color: #f4efdf;
+
+    border: 0;
+    border-radius: 14px;
+
+    font: inherit;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.password-error {
+    margin-top: 15px;
+
+    color: #8a4c45 !important;
+
+    font-size: 0.95rem !important;
+}
+/* ==============================================
+   EVENT INFO PHOTO
+============================================== */
+
+.when-where-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+
+    align-items: center;
+}
+
+.event-info-photo {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+
+/* ==============================================
+   EVENT INFO SLIDESHOW
+============================================== */
+
+.slideshow {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+    margin-top: 45px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+}
+
+.slideshow-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+}
+
+.slideshow-image.active {
+    opacity: 1;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .when-where-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .event-info-photo {
+        height: 280px;
+    }
+
+    .slideshow {
+        height: 350px;
+        margin-top: 30px;
+    }
+
+}
+@media (max-width: 600px) {
+
+    /* Password gate */
+
+    #password-form {
+        width: min(100%, 330px);
+    }
+
+
+    /* Homepage headline */
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 11vw, 3.4rem);
+    }
+
+}

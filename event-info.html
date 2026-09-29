@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>event info & faqs — Emmet & Claudia</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="info-page">
+
+        <a class="back-link" href="index.html">← home</a>
+
+
+        <header class="info-header">
+            <h1>event info & faqs</h1>
+        </header>
+
+
+        <!-- WHEN + WHERE -->
+
+       <section class="info-section">
+
+            <h2>when + where</h2>
+
+            <div class="when-where-layout">
+
+                <div class="event-info-block">
+
+                    <p>
+                        <strong>wed nov 25, 2026, 6–10p</strong>
+                    </p>
+
+                    <p>
+                        <strong>Lupo Restaurant</strong><br>
+
+                        <a
+                            href="https://www.google.com/maps/place/4303+Fremont+Ave+N,+Seattle,+WA+98103/@47.6591036,-122.3502486,17z/data=!3m1!4b1!4m6!3m5!1s0x5490145336649539:0x7eb1e6d9fb9e4cf4!8m2!3d47.6591036!4d-122.3502486!16s%2Fg%2F11bw3_6192?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            4303 Fremont Ave N, Seattle, WA
+                        </a>
+                    </p>
+
+                </div>
+
+                <img
+                    class="event-info-photo"
+                    src="images/2024_r_and_l_event_info.png"
+                    alt=""
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- WHAT -->
+
+        <section class="info-section">
+
+            <h2>what</h2>
+
+            <p>
+                stop for however short or long to celebrate with us and enjoy
+                one of our favorite Seattle restaurants. the pizza is great
+                (Emmet approved), the ice cream is fantastic (Claudia approved),
+                the drinks are delicious, and their logo is unbeatable.
+            </p>
+
+        </section>
+
+
+        <!-- FAQ -->
+
+        <section class="info-section faq-section">
+
+            <h2>faqs</h2>
+
+
+            <div class="faq-item">
+
+                <h3>
+                    thanksgiving is a busy time for me, what if I can only
+                    say hi for a little bit?
+                </h3>
+
+                <p>
+                    please come through for however much time you feel comfortable.
+                </p>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <h3>i'll be out of town!</h3>
+
+                <p>
+                    that's more of a comment, we'll be sad to miss you but
+                    understand. we're crazy to plan this on this day, that's on us.
+                </p>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <h3>is there a dress code?</h3>
+
+                <p>
+                    no, wear whatever you want, truly.
+                </p>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <h3>what is parking like around Lupo?</h3>
+
+                <p>
+                    historically not great, driving around the surrounding
+                    neighborhoods usually will get you a spot.
+                </p>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <h3>will Hibou be there?</h3>
+
+                <p>
+                    sadly no. He's not allowed, but our incoming 4th family member will be in "attendance". 
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RSVP -->
+
+        <a class="info-rsvp-button" href="rsvp.html">
+            RSVP NOW
+        </a>
+        <div class="slideshow">
+
+            <img
+                class="slideshow-image active"
+                src="images/slideshow_01.png"
+                alt=""
+            >
+
+            <img
+                class="slideshow-image"
+                src="images/slideshow_02.png"
+                alt=""
+            >
+
+            <img
+                class="slideshow-image"
+                src="images/slideshow_03.png"
+                alt=""
+            >
+
+            <img
+                class="slideshow-image"
+                src="images/slideshow_04.png"
+                alt=""
+            >
+
+            <img
+                class="slideshow-image"
+                src="images/slideshow_05.png"
+                alt=""
+            >
+
+            <img
+                class="slideshow-image"
+                src="images/slideshow_06.png"
+                alt=""
+            >
+
+            <img
+                class="slideshow-image"
+                src="images/slideshow_07.png"
+                alt=""
+            >
+
+            <img
+                class="slideshow-image"
+                src="images/slideshow_08.png"
+                alt=""
+            >
+
+        </div>
+    </main>
+    <script>
+        if (sessionStorage.getItem("eventAccess") !== "granted") {
+            window.location.replace("index.html");
+        }
+    </script>
+    <script>
+
+        const slides = document.querySelectorAll(".slideshow-image");
+
+        let currentSlide = 0;
+
+        setInterval(function () {
+
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+
+        }, 2500);
+
+    </script>
+</body>
+
+</html>

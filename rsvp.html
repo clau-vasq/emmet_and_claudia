@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP — Emmet & Claudia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="rsvp-page">
+
+        <a class="back-link" href="index.html">← HOME</a>
+
+        <header class="rsvp-header">
+            <h1>RSVP</h1>
+            <p>will you be joining us?</p>
+        </header>
+
+        <form id="rsvp-form">
+
+            <!-- RSVP CHOICE -->
+            <fieldset class="rsvp-fieldset">
+
+                <legend class="sr-only">
+                    will you be joining us?
+                </legend>
+
+                <div class="rsvp-choices">
+
+                    <label class="rsvp-choice">
+                        <input
+                            type="radio"
+                            name="attendance"
+                            value="yes"
+                            required
+                        >
+
+                        <span class="choice-card">
+                            <span class="choice-title">YES!</span>
+
+                            <img
+                                src="images/yes.png"
+                                alt=""
+                            >
+                        </span>
+                    </label>
+
+
+                    <label class="rsvp-choice">
+                        <input
+                            type="radio"
+                            name="attendance"
+                            value="no"
+                        >
+
+                        <span class="choice-card">
+                            <span class="choice-title">NO, SORRY!</span>
+
+                            <img
+                                src="images/no.png"
+                                alt=""
+                            >
+                        </span>
+                    </label>
+
+
+                    <label class="rsvp-choice">
+                        <input
+                            type="radio"
+                            name="attendance"
+                            value="maybe"
+                        >
+
+                        <span class="choice-card">
+                            <span class="choice-title">MAYBE</span>
+
+                            <img
+                                src="images/maybe.png"
+                                alt=""
+                            >
+                        </span>
+                    </label>
+
+                </div>
+
+                <p class="maybe-note">
+                    Note: choosing “maybe” means you are inviting texts
+                    from Emmet & Claudia harassing you for updates.
+                </p>
+
+            </fieldset>
+
+
+            <!-- NAME -->
+            <div class="form-field">
+
+                <label for="name">
+                    your name
+                </label>
+
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                >
+
+            </div>
+
+
+            <!-- GUESTS -->
+            <div class="form-field">
+
+                <label for="guests">
+                    who else will be joining you?
+                    <span class="optional">(leave blank if it's just you.)</span>
+                </label>
+
+                <input
+                    id="guests"
+                    name="guests"
+                    type="text"
+                >
+
+            </div>
+
+
+            <!-- DIETARY -->
+            <div class="form-field">
+
+                <label for="dietary">
+                    any dietary restrictions or allergies?
+                    <span class="optional">(we plan to have vegetarian and gluten-free options, please let us know of any other considerations.)</span>
+                </label>
+
+                <textarea
+                    id="dietary"
+                    name="dietary"
+                    rows="3"
+                ></textarea>
+
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="form-field">
+
+                <label for="email">
+                    email address
+                    <span class="optional">(if you want emailed reminders.)</span>
+                </label>
+
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                >
+
+            </div>
+
+
+            <!-- COMMENTS -->
+            <div class="form-field">
+
+                <label for="comments">
+                    anything else you'd like us to know?
+                </label>
+
+                <textarea
+                    id="comments"
+                    name="comments"
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <button class="submit-rsvp" type="submit">
+                SUBMIT RSVP
+            </button>
+
+        </form>
+        
+        <!-- RSVP CONFIRMATION -->
+        <section id="rsvp-confirmation" class="rsvp-confirmation" hidden>
+
+            <h1>thank you!</h1>
+
+
+            <!-- YES confirmation -->
+
+            <div id="yes-confirmation" class="confirmation-layout" hidden>
+
+                <div class="confirmation-photo">
+                    <picture>
+                        <source
+                            media="(max-width: 650px)"
+                            srcset="images/yes_confirmation.png"
+                        >
+
+                        <img
+                            src="images/yes_confirmation_desktop.png"
+                            alt=""
+                        >
+                    </picture>
+                </div>
+
+                <div class="confirmation-details">
+
+                    <h2>when + where</h2>
+
+                    <p>
+                        <strong>wed nov 25, 2026, 6–10p</strong>
+                    </p>
+
+                    <p>
+                        <strong>Lupo Restaurant</strong><br>
+
+                        <a
+                            href="https://www.google.com/maps/place/4303+Fremont+Ave+N,+Seattle,+WA+98103/@47.6591036,-122.3502486,17z/data=!3m1!4b1!4m6!3m5!1s0x5490145336649539:0x7eb1e6d9fb9e4cf4!8m2!3d47.6591036!4d-122.3502486!16s%2Fg%2F11bw3_6192?entry=ttu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            4303 Fremont Ave N, Seattle, WA
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAYBE confirmation -->
+
+            <div id="maybe-confirmation" class="confirmation-layout" hidden>
+
+                <div class="confirmation-photo">
+                    <img
+                        src="images/maybe_confirmation.png"
+                        alt=""
+                    >
+                </div>
+
+                <div class="confirmation-details">
+
+                    <h2>when + where</h2>
+
+                    <p>
+                        <strong>wed nov 25, 2026, 6–10p</strong>
+                    </p>
+
+                    <p>
+                        <strong>Lupo Restaurant</strong><br>
+
+                        <a
+                            href="https://www.google.com/maps/place/4303+Fremont+Ave+N,+Seattle,+WA+98103/@47.6591036,-122.3502486,17z/data=!3m1!4b1!4m6!3m5!1s0x5490145336649539:0x7eb1e6d9fb9e4cf4!8m2!3d47.6591036!4d-122.3502486!16s%2Fg%2F11bw3_6192?entry=ttu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            4303 Fremont Ave N, Seattle, WA
+                        </a>
+                    </p>
+
+                    <p class="maybe-message">
+                        you have officially invited texts from Emmet & Claudia
+                        harassing you for updates.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NO confirmation -->
+
+            <div id="no-confirmation" class="confirmation-layout" hidden>
+
+                <div class="confirmation-photo">
+                    <img
+                        src="images/no_confirmation.png"
+                        alt=""
+                    >
+                </div>
+
+                <div class="confirmation-details">
+
+                    <p class="sorry-message">
+                        we're sorry to miss you ❤️
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a class="back-home-button" href="index.html">
+                back home
+            </a>
+
+        </section>
+
+    </main>
+
+<script>
+    if (sessionStorage.getItem("eventAccess") !== "granted") {
+        window.location.replace("index.html");
+    }
+</script>
+<script>
+
+const form = document.getElementById("rsvp-form");
+
+const confirmation = document.getElementById("rsvp-confirmation");
+
+const yesConfirmation =
+    document.getElementById("yes-confirmation");
+
+const noConfirmation =
+    document.getElementById("no-confirmation");
+
+const maybeConfirmation =
+    document.getElementById("maybe-confirmation");
+
+const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxPUun9UsQ76UwuaCnWwtP6GK8JhrgJnIJrYXsSbgOjVVLBCksWIBKbWCzpqHthFKLs/exec";
+
+
+form.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const submitButton = form.querySelector(".submit-rsvp");
+
+    submitButton.disabled = true;
+    submitButton.textContent = "SUBMITTING...";
+
+
+    const formData = new FormData(form);
+
+    const data = {
+        name: formData.get("name"),
+        attendance: formData.get("attendance"),
+        guests: formData.get("guests"),
+        dietary: formData.get("dietary"),
+        email: formData.get("email"),
+        comments: formData.get("comments")
+    };
+
+
+    try {
+
+        const response = await fetch(scriptURL, {
+            method: "POST",
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            throw new Error("Submission failed");
+        }
+
+
+        /* Hide form */
+
+        form.hidden = true;
+
+
+        /* Show confirmation */
+
+        confirmation.hidden = false;
+
+
+        if (data.attendance === "yes") {
+
+            yesConfirmation.hidden = false;
+
+        } else if (data.attendance === "maybe") {
+
+            maybeConfirmation.hidden = false;
+
+        } else if (data.attendance === "no") {
+
+            noConfirmation.hidden = false;
+
+        }
+
+
+        /* Move browser to confirmation */
+
+        confirmation.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        submitButton.disabled = false;
+        submitButton.textContent = "SUBMIT RSVP";
+
+        alert(
+            "something went wrong submitting your RSVP. please try again!"
+        );
+
+    }
+
+});
+
+</script>
+</body>
+</html>
