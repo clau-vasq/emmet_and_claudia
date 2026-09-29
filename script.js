@@ -30,7 +30,7 @@ passwordForm.addEventListener("submit", function(event) {
     } else {
 
         passwordError.textContent =
-            "nope, try again!";
+            "nope, try again! hint: 5 letters, starts with h, ends with ou";
 
         passwordError.hidden = false;
 

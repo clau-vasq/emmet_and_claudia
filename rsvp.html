@@ -34,7 +34,6 @@
                             type="radio"
                             name="attendance"
                             value="yes"
-                            required
                         >
 
                         <span class="choice-card">
@@ -330,6 +329,21 @@ const scriptURL =
 form.addEventListener("submit", async function(event) {
 
     event.preventDefault();
+
+    const attendance =
+        form.querySelector('input[name="attendance"]:checked');
+
+    if (!attendance) {
+
+        alert("please select yes, no, or maybe!");
+
+        document.querySelector(".rsvp-choices").scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        return;
+    }
 
     const submitButton = form.querySelector(".submit-rsvp");
 
